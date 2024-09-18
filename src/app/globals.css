@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -17,7 +21,9 @@
 }
 
 body {
+  font-family: 'Ubuntu';
   color: rgb(var(--foreground-rgb));
+  transition: background-color 0.3s ease, color 0.3s ease;
   background: linear-gradient(
       to bottom,
       transparent,
@@ -26,8 +32,146 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+.dark {
+  background-color: #1a202c; /* Dark background */
+  color: #e2e8f0; /* Light text */
+}
+
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
 }
+
+/* Toggle Switch Container */
+.dark-mode-switch {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Hidden Checkbox */
+.dark-mode-switch input[type="checkbox"] {
+  display: none;
+}
+
+/* Slider (the actual switch) */
+.dark-mode-switch .slider {
+  position: relative;
+  width: 40px; /* Smaller width */
+  height: 24px; /* Smaller height */
+  background-color: #ccc;
+  border-radius: 24px; /* Adjusted to match height */
+  transition: background-color 0.3s;
+  margin: 0 8px; /* Reduced margin */
+}
+
+.dark-mode-switch .slider::before {
+  content: "";
+  position: absolute;
+  width: 18px; /* Smaller width */
+  height: 18px; /* Smaller height */
+  border-radius: 50%;
+  background-color: white;
+  transition: transform 0.3s;
+  top: 3px; /* Adjusted to fit height */
+  left: 3px; /* Adjusted to fit width */
+}
+
+/* Checked State */
+.dark-mode-switch input:checked + .slider {
+  background-color: #1F2937;
+}
+
+.dark-mode-switch input:checked + .slider::before {
+  transform: translateX(16px); /* Adjusted for new size */
+}
+
+/* Icons Styling */
+.icon {
+  font-size: 18px; /* Smaller font size for icons */
+  transition: color 0.3s;
+}
+
+/* Global CSS for bounce animation */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+.animate-bounce {
+  animation: bounce 1s infinite;
+}
+
+/* Navbar Slide In Animation */
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.navbar {
+  animation: slideIn 0.5s ease-out;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-out;
+}
+
+/* Bounce Button Animation */
+@keyframes smallBounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.bounce-button {
+  animation: smallBounce 2s infinite;
+}
+
+/* Pulse Button Animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.pulse-button {
+  animation: pulse 1.5s infinite;
+}
+
