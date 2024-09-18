@@ -10,7 +10,7 @@ export default function Contact() {
 
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
-    
+
     const formData = new FormData(event.target as HTMLFormElement);
     const data = {
       name: formData.get("name"),
@@ -76,11 +76,12 @@ export default function Contact() {
             <textarea
               id="message"
               name="message"
-              rows="4"
+              rows={4}  // Change from "4" to {4}
               className="mt-1 block w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
               placeholder="Your Message"
               required
             ></textarea>
+
           </div>
           <button
             type="submit"
