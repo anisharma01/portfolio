@@ -26,9 +26,8 @@ export default function About() {
           <div className="flex-1 bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md">
             <h2 className="text-3xl font-bold mb-6">About Me</h2>
             <p className="text-lg">
-              {/* Add your paragraph about yourself here */}
-              Hi, I'm Anish!
-              I'm a web developer with experience in building scalable, efficient applications <span className="text-custom1 dark:text-custom2">using</span> Python, Next.js, and Tailwind CSS. I love solving complex problems through code, always aiming to optimize performance and functionality. Outside of work, I’m constantly <span className="text-custom1 dark:text-custom2">learning</span> new tools and techniques to stay ahead in the fast-evolving tech landscape. Let’s build something amazing <span className="text-custom1 dark:text-custom2">together</span>!
+              Hi, I&apos;m Anish!
+              I&apos;m a web developer with experience in building scalable, efficient applications <span className="text-custom1 dark:text-custom2">using</span> Python, Next.js, and Tailwind CSS. I love solving complex problems through code, always aiming to optimize performance and functionality. Outside of work, I&apos;m constantly <span className="text-custom1 dark:text-custom2">learning</span> new tools and techniques to stay ahead in the fast-evolving tech landscape. Let&apos;s build something amazing <span className="text-custom1 dark:text-custom2">together</span>!
             </p>
           </div>
 
