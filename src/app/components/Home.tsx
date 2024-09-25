@@ -52,7 +52,24 @@ export default function Home() {
         </a>
       </div>
 
-      
+      {/* Right side: Profile Image and View Resume Button */}
+      <div className="md:col-span-2 flex flex-col items-center space-y-4">
+        <img
+          src="/images/resume_thumbnail.png" // Adjust the path if needed
+          alt="Profile"
+          className="rounded-full border-4 border-custom3 dark:border-custom2 shadow-lg w-48 h-48 object-cover transition-transform transform hover:scale-110 duration-300"
+        />
+        
+        {/* View Resume Button */}
+        <a
+          href="/docs/resume.pdf" // Link to the resume PDF
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-xl px-4 py-2 bg-custom3 dark:bg-custom2 text-black rounded-full dark:hover:bg-custom3 hover:bg-custom3 hover:text-black transition-transform transform hover:scale-110 duration-300"
+        >
+          View Resume
+        </a>
+      </div>
 
       {/* Fixed Social Icons Section */}
       <div className="fixed left-0 top-1/2 transform -translate-y-1/2 flex flex-col space-y-4 backdrop-blur-lg bg-white/30 dark:bg-gray-900/30 px-3 py-4 rounded-lg border-b-2 border-r-1 border-custom3 dark:border-custom2 shadow-lg hidden md:flex">
