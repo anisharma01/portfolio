@@ -3,19 +3,14 @@
 import React, { useState } from "react";
 import Typewriter from "typewriter-effect";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTimes, faEllipsisV } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin, faGithub, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 
 export default function Home() {
   const [isHovered, setIsHovered] = useState(false);
-  const [showResume, setShowResume] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false); // State for the triple-dot menu
 
   const handleHover = () => setIsHovered(true);
   const handleLeave = () => setIsHovered(false);
-  const toggleResume = () => setShowResume(!showResume);
-  const toggleMenu = () => setMenuOpen(!menuOpen); // Toggle menu function
 
   return (
     <div
@@ -52,23 +47,32 @@ export default function Home() {
         </a>
       </div>
 
-      {/* Right side: Profile Image and View Resume Button */}
-      <div className="md:col-span-2 flex flex-col items-center space-y-4">
-        <img
-          src="/images/resume_thumbnail.png" // Adjust the path if needed
-          alt="Profile"
-          className="rounded-full border-4 border-custom3 dark:border-custom2 shadow-lg w-48 h-48 object-cover transition-transform transform hover:scale-110 duration-300"
-        />
-        
-        {/* View Resume Button */}
-        <a
-          href="/docs/resume.pdf" // Link to the resume PDF
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-xl px-4 py-2 bg-custom3 dark:bg-custom2 text-black rounded-full dark:hover:bg-custom3 hover:bg-custom3 hover:text-black transition-transform transform hover:scale-110 duration-300"
+      {/* Right side: Resume Thumbnail */}
+      <div className="md:col-span-2 flex flex-col items-center relative">
+        <div
+          className="relative overflow-hidden cursor-pointer"
+          onMouseEnter={handleHover}
+          onMouseLeave={handleLeave}
         >
-          View Resume
-        </a>
+          <img
+            src="/images/resume_thumbnail.png" // Adjust the path if needed
+            alt="Resume Thumbnail"
+            className={`rounded-lg border-b-2 border-r-2 border-custom3 dark:border-custom2 shadow-lg w-48 h-48 object-cover transition-transform duration-300 ${isHovered ? 'filter blur-sm' : ''}`}
+          />
+          <div className={`absolute inset-0 flex items-center justify-center text-2xl font-bold ${isHovered ? 'hidden' : 'text-black shadow-lg'}`}>
+            Resume
+          </div>
+          {isHovered && (
+            <a
+              href="/docs/resume.pdf" // Link to the resume PDF
+              target="_blank"
+              rel="noopener noreferrer"
+              className="absolute inset-0 flex items-center justify-center bg-gray-900 bg-opacity-75 text-white text-lg font-semibold transition-opacity duration-300"
+            >
+              View Resume
+            </a>
+          )}
+        </div>
       </div>
 
       {/* Fixed Social Icons Section */}

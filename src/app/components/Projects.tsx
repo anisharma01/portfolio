@@ -25,7 +25,7 @@ export default function Projects() {
     },
     {
       title: "Eshopstride",
-      description: "A eCommerse website providing service to build various application. Collaborated with the main developer team to optimize website performance, improving reliability and end-user experience by 80%. Strengthened understanding of client needs and refined technical skills through various hands-on project work. ",
+      description: "An E-commerse website providing service to build various application. Collaborated with the main developer team to optimize website performance, improving reliability and end-user experience by 80%. Strengthened understanding of client needs and refined technical skills through various hands-on project work.",
       technologies: ["Next.js", "TypeScript", "Node.js"],
       githubLink: "https://github.com/your-username/project3",
       liveDemo: "https://www.eshopstride.com/",
@@ -33,8 +33,8 @@ export default function Projects() {
     },
     {
       title: "Dashboard (Eshopstride)",
-      description: " Developed a new Dashboard System for Eshopstride website, automating 90% of data management and analytics tasks. Optimized data retrieval processes to further enhance API response speed, resulting in a 30% Faster in average response time and improved overall system efficiency.",
-      technologies: ["Next.js", "TypeScript", "Node.js", "API Intergration"],
+      description: "Developed a new Dashboard System for Eshopstride website, automating 90% of data management and analytics tasks. Optimized data retrieval processes to further enhance API response speed, resulting in a 30% Faster in average response time and improved overall system efficiency.",
+      technologies: ["Next.js", "TypeScript", "API Intergration"],
       githubLink: "https://github.com/your-username/project4",
       liveDemo: "https://www.eshopstride.com/Dashboard_New",
       image: "/images/project4.png",
@@ -76,7 +76,7 @@ export default function Projects() {
                 className="w-full flex-shrink-0"
                 style={{ minWidth: "100%" }}
               >
-                <div className="bg-white dark:bg-gray-700 rounded-lg shadow-lg overflow-hidden flex flex-col items-center md:h-[500px]"> {/* Increased height */}
+                <div className="bg-white dark:bg-gray-700 rounded-lg shadow-lg overflow-hidden flex flex-col items-center md:h-[500px]">
                   {/* Project Image with Hover Effect */}
                   <div className="relative group w-full h-full">
                     <img
@@ -85,10 +85,11 @@ export default function Projects() {
                       className="w-full h-full object-cover transition-all duration-300 ease-in-out group-hover:blur-sm"
                     />
                     <div className="absolute inset-0 flex flex-col justify-center items-start p-6 pl-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out bg-black bg-opacity-50">
-                      <h3 className="text-xl font-bold mb-2 text-left text-white">
+                      <h3 className="text-xl md:text-2xl font-bold mb-2 text-left text-white">
                         {project.title}
                       </h3>
-                      <p className="text-left text-gray-300 mb-4">
+                      {/* Hide Description in Mobile View */}
+                      <p className="text-left text-gray-300 mb-4 hidden md:block">
                         {project.description}
                       </p>
 
@@ -104,7 +105,7 @@ export default function Projects() {
                         ))}
                       </div>
 
-                      {/* Links */}
+                      {/* Links - Adjust to ensure they are visible */}
                       <div className="flex space-x-4 mt-2">
                         <a
                           href={project.githubLink}
