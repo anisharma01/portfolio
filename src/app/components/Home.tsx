@@ -56,13 +56,13 @@ export default function Home() {
 
       {/* Fixed Social Icons Section */}
       <div className="fixed left-0 top-1/2 transform -translate-y-1/2 flex flex-col space-y-4 backdrop-blur-lg bg-white/30 dark:bg-gray-900/30 px-3 py-4 rounded-lg border-b-2 border-r-1 border-custom3 dark:border-custom2 shadow-lg hidden md:flex">
-        <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.linkedin.com/in/anish-sharma-863048231/" target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon icon={faLinkedin} size="2x" className="text-blue-700 dark:text-blue-400 hover:text-blue-500 dark:hover:text-blue-300 transition-transform transform hover:scale-110" />
         </a>
-        <a href="https://github.com/your-github-profile" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/anisharma01" target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon icon={faGithub} size="2x" className="text-black dark:text-gray-300 hover:text-gray-700 dark:hover:text-gray-400 transition-transform transform hover:scale-110" />
         </a>
-        <a href="https://www.instagram.com/your-instagram-profile" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.instagram.com/anisharma.xe" target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon icon={faInstagram} size="2x" className="text-pink-500 dark:text-pink-300 hover:text-pink-300 dark:hover:text-pink-200 transition-transform transform hover:scale-110" />
         </a>
       </div>

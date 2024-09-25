@@ -41,11 +41,11 @@ export default function About() {
               </p>
               <p className="flex items-center">
                 <FontAwesomeIcon icon={faEnvelope} className="mr-3 text-custom3 dark:text-custom2" />
-                Email: anish.sharma@example.com
+                Email: anishsharma1498@gmail.com
               </p>
               <p className="flex items-center">
                 <FontAwesomeIcon icon={faMapMarkerAlt} className="mr-3 text-custom3 dark:text-custom2" />
-                Address: 123 Main Street, City, Country
+                Address: Chandigarh, India
               </p>
               {/* <p className="flex items-center">
                 <FontAwesomeIcon icon={faBirthdayCake} className="mr-3 text-custom3 dark:text-custom2" />
@@ -60,8 +60,8 @@ export default function About() {
           <div>
             <h2 className="text-3xl font-bold mb-6">Experience</h2>
             <ul className="list-disc ml-5 space-y-2">
-              <li>Software Developer at XYZ Corp (2020-Present)</li>
-              <li>UI/UX Designer at ABC Studio (2018-2020)</li>
+              <li>Software Developer at XYZ Corp (May 2024 - August 2024)</li>
+              <li>Alasso developer (2022 - Present)</li>
             </ul>
           </div>
           <a
@@ -80,7 +80,7 @@ export default function About() {
           <div>
             <h2 className="text-3xl font-bold mb-6">Skills</h2>
             <div className="grid grid-cols-2 gap-4">
-              {["JavaScript", "React", "Next.js", "Node.js", "Python", "Django"].map(skill => (
+              {["C++", "JavaScript", "React", "Next.js", "Node.js", "Python-ML", "API", "Postman", "Tailwind", "Bootstrap"].map(skill => (
                 <div key={skill} className="text-custom1 bg-custom3 dark:bg-custom2 p-4 rounded-lg shadow-md text-center transform transition-transform hover:scale-105">
                   {skill}
                 </div>
