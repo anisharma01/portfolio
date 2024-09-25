@@ -17,15 +17,15 @@ export default function Projects() {
     },
     {
       title: "Agrismart",
-      description: "A brief description of Project 2.",
-      technologies: ["React", "Python", "Node.js"],
+      description: "Developed a Crop Recommendation tool to help selecting crop best suited for environment. Crop Selling & Bargaining System with Crop Recommendation. A platform facilitating Crop Selling, locating nearby markets with latest market price updates.",
+      technologies: ["React", "Python", "AI/ML", "Node.js"],
       githubLink: "https://github.com/anisharma01/Asmart1",
       liveDemo: "https://asmart.vercel.app/",
       image: "/images/project2.png",
     },
     {
       title: "Eshopstride",
-      description: "A brief description of Project 3.",
+      description: "A eCommerse website providing service to build various application. Collaborated with the main developer team to optimize website performance, improving reliability and end-user experience by 80%. Strengthened understanding of client needs and refined technical skills through various hands-on project work. ",
       technologies: ["Next.js", "TypeScript", "Node.js"],
       githubLink: "https://github.com/your-username/project3",
       liveDemo: "https://www.eshopstride.com/",
@@ -33,7 +33,7 @@ export default function Projects() {
     },
     {
       title: "Dashboard (Eshopstride)",
-      description: "A brief description of Project 4.",
+      description: " Developed a new Dashboard System for Eshopstride website, automating 90% of data management and analytics tasks. Optimized data retrieval processes to further enhance API response speed, resulting in a 30% Faster in average response time and improved overall system efficiency.",
       technologies: ["Next.js", "TypeScript", "Node.js", "API Intergration"],
       githubLink: "https://github.com/your-username/project4",
       liveDemo: "https://www.eshopstride.com/Dashboard_New",

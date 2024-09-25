@@ -54,7 +54,7 @@ export default function Contact() {
                 id="name"
                 name="name"
                 type="text"
-                className="mt-1 block w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                className="text-custom1 mt-1 block w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 placeholder="Your Name"
                 required
               />
@@ -65,7 +65,7 @@ export default function Contact() {
                 id="email"
                 name="email"
                 type="email"
-                className="mt-1 block w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                className="text-custom1 mt-1 block w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 placeholder="Your Email"
                 required
               />
@@ -77,7 +77,7 @@ export default function Contact() {
               id="message"
               name="message"
               rows={4}  // Change from "4" to {4}
-              className="mt-1 block w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+              className="text-custom1 mt-1 block w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
               placeholder="Your Message"
               required
             ></textarea>
@@ -99,13 +99,13 @@ export default function Contact() {
         <p>Follow me on:</p>
         {/* Social Media Handles */}
         <div className="mt-8 flex justify-center space-x-6">
-          <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer" className="text-custom3 dark:text-custom2 hover:underline">
+          <a href="https://www.linkedin.com/in/anish-sharma-863048231/" target="_blank" rel="noopener noreferrer" className="text-custom3 dark:text-custom2 hover:underline">
             <FontAwesomeIcon icon={faLinkedin} size="2x" />
           </a>
-          <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer" className="text-custom3 dark:text-custom2 hover:underline">
+          <a href="https://github.com/anisharma01" target="_blank" rel="noopener noreferrer" className="text-custom3 dark:text-custom2 hover:underline">
             <FontAwesomeIcon icon={faGithub} size="2x" />
           </a>
-          <a href="https://twitter.com/your-profile" target="_blank" rel="noopener noreferrer" className="text-custom3 dark:text-custom2 hover:underline">
+          <a href="https://x.com/Anish_Sharma__" target="_blank" rel="noopener noreferrer" className="text-custom3 dark:text-custom2 hover:underline">
             <FontAwesomeIcon icon={faTwitter} size="2x" />
           </a>
         </div>

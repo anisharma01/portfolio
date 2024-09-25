@@ -27,7 +27,8 @@ export default function About() {
             <h2 className="text-3xl font-bold mb-6">About Me</h2>
             <p className="text-lg">
               {/* Add your paragraph about yourself here */}
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque euismod, lacus ut cursus sodales, nisi quam feugiat ex, nec interdum libero nulla eu nisi.
+              Hi, I'm Anish!
+              I'm a web developer with experience in building scalable, efficient applications <span className="text-custom1 dark:text-custom2">using</span> Python, Next.js, and Tailwind CSS. I love solving complex problems through code, always aiming to optimize performance and functionality. Outside of work, I’m constantly <span className="text-custom1 dark:text-custom2">learning</span> new tools and techniques to stay ahead in the fast-evolving tech landscape. Let’s build something amazing <span className="text-custom1 dark:text-custom2">together</span>!
             </p>
           </div>
 
@@ -60,7 +61,7 @@ export default function About() {
           <div>
             <h2 className="text-3xl font-bold mb-6">Experience</h2>
             <ul className="list-disc ml-5 space-y-2">
-              <li>Software Developer at XYZ Corp (May 2024 - August 2024)</li>
+              <li>Software Developer Engineer Internship @Eshopstride (May 2024 - August 2024)</li>
               <li>Alasso developer (2022 - Present)</li>
             </ul>
           </div>
@@ -79,9 +80,9 @@ export default function About() {
           {/* Skills */}
           <div>
             <h2 className="text-3xl font-bold mb-6">Skills</h2>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="max-h-60 overflow-y-auto grid grid-cols-2 gap-3">
               {["C++", "JavaScript", "React", "Next.js", "Node.js", "Python-ML", "API", "Postman", "Tailwind", "Bootstrap"].map(skill => (
-                <div key={skill} className="text-custom1 bg-custom3 dark:bg-custom2 p-4 rounded-lg shadow-md text-center transform transition-transform hover:scale-105">
+                <div key={skill} className="text-custom1 bg-custom3 dark:bg-custom2 p-3 m-3 rounded-lg shadow-md text-center transform transition-transform hover:scale-105">
                   {skill}
                 </div>
               ))}
@@ -90,9 +91,9 @@ export default function About() {
 
           {/* Courses */}
           <div>
-            <h2 className="text-3xl font-bold mb-6">Courses</h2>
+            <h2 className="text-3xl font-bold mb-6">Courses & Certifications</h2>
             <div className="max-h-60 overflow-y-auto space-y-4 border-l-2 border-custom3 dark:border-custom2 pl-4">
-              {["Course 1", "Course 2", "Course 3", "Course 4", "Course 5", "Course 6", "Course 7", "Course 8", "Course 9", "Course 10", "Course 11"].map(course => (
+              {["Introduction to Programming through C++ (NPTEL)", "Developing AI Applications with Python and Flask", "Introduction to Web Development with HTML, CSS, JavaScript", "Build Dynamic User Interfaces (UI) for Websites", "Introduction to Computer Vision and Image Processing", "Introduction to Cybersecurity Tools & Cyberattacks"].map(course => (
                 <div key={course} className="text-lg">
                   {course}
                 </div>
