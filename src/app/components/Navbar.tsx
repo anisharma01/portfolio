@@ -57,7 +57,7 @@ export default function Navbar() {
             className="w-10 h-10 rounded-full mr-2"
           />
           <a 
-            href="#home" 
+            href="/" 
             className="text-lg md:text-xl font-thin border-r-2 border-b-1 border-custom3 dark:border-custom2 pr-2 pb-2 rounded-br-lg hidden md:block"
           >
             A N I S H _ S H A R M A
