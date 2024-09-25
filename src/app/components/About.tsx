@@ -60,7 +60,7 @@ export default function About() {
           <div>
             <h2 className="text-3xl font-bold mb-6">Experience</h2>
             <ul className="list-disc ml-5 space-y-2">
-              <li>Software Developer Engineer Internship @Eshopstride (May 2024 - August 2024)</li>
+              <li>Intern Software Developer Engineer @Eshopstride (May 2024 - August 2024)</li>
               <li>Alasso developer (2022 - Present)</li>
             </ul>
           </div>
