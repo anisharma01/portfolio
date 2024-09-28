@@ -135,13 +135,13 @@ export default function Projects() {
         {/* Next and Previous Buttons */}
         <button
           onClick={handlePrev}
-          className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-custom3 dark:bg-custom2 text-white p-3 rounded-full shadow-lg hover:bg-gray-500 transition-all duration-300"
+          className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-custom3 dark:bg-custom2 text-white p-3 rounded-full shadow-lg hover:bg-gray-500 dark:hover:bg-gray-500 transition-all duration-300"
         >
           <FontAwesomeIcon icon={faChevronLeft} size="lg" />
         </button>
         <button
           onClick={handleNext}
-          className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-custom3 dark:bg-custom2 text-white p-3 rounded-full shadow-lg hover:bg-gray-500 transition-all duration-300"
+          className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-custom3 dark:bg-custom2 text-white p-3 rounded-full shadow-lg hover:bg-gray-500 dark:hover:bg-gray-500 transition-all duration-300"
         >
           <FontAwesomeIcon icon={faChevronRight} size="lg" />
         </button>

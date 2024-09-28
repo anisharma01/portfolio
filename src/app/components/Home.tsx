@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Typewriter from "typewriter-effect";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub, faInstagram } from "@fortawesome/free-brands-svg-icons";
-import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
+import { faArrowDown, faComments } from "@fortawesome/free-solid-svg-icons"; // Import faComments from the solid icons
 
 export default function Home() {
   const [isHovered, setIsHovered] = useState(false);
@@ -40,7 +40,7 @@ export default function Home() {
         {/* Get to Know Me Button */}
         <a
           href="#about"
-          className="text-xl px-4 py-2 bg-custom3 dark:bg-custom2 text-black rounded-full dark:hover:bg-custom3 hover:bg-custom3 hover:text-black transition-transform transform hover:scale-110 duration-300 flex items-center"
+          className="text-xl px-4 py-2 bg-custom3 hover:bg-custom1 hover:text-custom3 dark:bg-custom2 text-black rounded-full dark:hover:bg-custom1 darkhover:text-custom2 hover:text-black transition-transform transform hover:scale-110 duration-300 flex items-center"
         >
           Get to Know Me
           <FontAwesomeIcon icon={faArrowDown} className="ml-2" />
@@ -73,6 +73,15 @@ export default function Home() {
             </a>
           )}
         </div>
+
+        {/* Simple Get in Touch Button */}
+        <a
+          href="#contact"
+          className="mt-6 text-xl flex items-center text-custom3 dark:text-custom2 transition-transform transform hover:scale-110 duration-300"
+        >
+          Get in Touch
+          <FontAwesomeIcon icon={faComments} className="ml-2" /> {/* Chat icon */}
+        </a>
       </div>
 
       {/* Fixed Social Icons Section */}
