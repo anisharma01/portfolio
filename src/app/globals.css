@@ -181,13 +181,13 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #75c9b7; /* Custom color for the scrollbar thumb */
+  background-color: #b7b7b7; /* Custom color for the scrollbar thumb */
   border-radius: 10px;
   border: 2px solid transparent; /* Add padding around the thumb */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #abd688; /* Thumb color on hover */
+  background-color: #ffffff; /* Thumb color on hover */
 }
 
 ::-webkit-scrollbar-track {

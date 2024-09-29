@@ -13,6 +13,7 @@ module.exports = {
         'custom4': '#ffe26a',
         'custom5': '#c7ddcc',
       },
+      
       borderWidth: {
         '1': '1px',
       },
