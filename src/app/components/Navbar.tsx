@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSun, faMoon, faBars, faTimes, faArrowUp } from "@fortawesome/free-solid-svg-icons";
 
@@ -51,13 +52,15 @@ export default function Navbar() {
       <div className="container mx-auto flex items-center justify-between">
         {/* Left: Profile Picture and Name */}
         <div className="flex items-center text-white font-bold">
-          <img
+          <Image
             src="/images/profile.jpg"
             alt="Profile Picture"
-            className="w-10 h-10 rounded-full mr-2"
+            width={40}  // Adjust these values as needed
+            height={40} // Adjust these values as needed
+            className="rounded-full mr-2"
           />
-          <a 
-            href="/" 
+          <a
+            href="/"
             className="text-lg md:text-xl font-thin border-r-2 border-b-1 border-custom3 dark:border-custom2 pr-2 pb-2 rounded-br-lg hidden md:block"
           >
             A N I S H _ S H A R M A

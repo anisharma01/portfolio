@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image"; // Import Image from next/image
 import Typewriter from "typewriter-effect";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub, faInstagram } from "@fortawesome/free-brands-svg-icons";
@@ -20,7 +21,7 @@ export default function Home() {
       {/* Left side: Social Icons + Text Section */}
       <div className="md:col-span-5 flex flex-col justify-center items-start space-y-8 m-5 md:ml-10">
         {/* Typewriter Section */}
-        <h1 className="text-3xl md:text-5xl font-bold text-left fade-in">
+        <h1 className="text-3xl md:text-5xl font-bold text-left fade-in mt-10">
           Hey there!, This is Anish Sharma.
         </h1>
         <div className="text-xl md:text-2xl font-medium mt-4 text-left fade-in">
@@ -54,10 +55,12 @@ export default function Home() {
           onMouseEnter={handleHover}
           onMouseLeave={handleLeave}
         >
-          <img
+          <Image
             src="/images/resume_thumbnail.png" // Adjust the path if needed
             alt="Resume Thumbnail"
-            className={`rounded-lg border-b-2 border-r-2 border-custom3 dark:border-custom2 shadow-lg w-48 h-48 object-cover transition-transform duration-300 ${isHovered ? 'filter blur-sm' : ''}`}
+            width={192} // Specify the width for better optimization
+            height={192} // Specify the height for better optimization
+            className={`rounded-lg border-b-2 border-r-2 border-custom3 dark:border-custom2 shadow-lg transition-transform duration-300 ${isHovered ? 'filter blur-sm' : ''}`}
           />
           <div className={`absolute inset-0 flex items-center justify-center text-2xl font-bold ${isHovered ? 'hidden' : 'text-black shadow-lg'}`}>
             Resume

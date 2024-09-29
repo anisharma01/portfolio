@@ -47,10 +47,6 @@ export default function About() {
                 <FontAwesomeIcon icon={faMapMarkerAlt} className="mr-3 text-custom3 dark:text-custom2" />
                 Address: Chandigarh, India
               </p>
-              {/* <p className="flex items-center">
-                <FontAwesomeIcon icon={faBirthdayCake} className="mr-3 text-custom3 dark:text-custom2" />
-                Age: 25
-              </p> */}
             </div>
           </div>
         </div>
@@ -79,9 +75,9 @@ export default function About() {
           {/* Skills */}
           <div>
             <h2 className="text-3xl font-bold mb-6">Skills</h2>
-            <div className="max-h-60 overflow-y-auto grid grid-cols-2 gap-3">
-              {["C++", "JavaScript", "React", "Next.js", "Node.js", "Python-ML", "API", "Postman", "Tailwind", "Bootstrap"].map(skill => (
-                <div key={skill} className="text-custom1 bg-custom3 dark:bg-custom2 p-3 m-3 rounded-lg shadow-md text-center transform transition-transform hover:scale-105">
+            <div className="max-h-60 overflow-y-auto grid grid-cols-3 gap-3">
+              {["C++", "JavaScript", "React", "Next.js", "Node.js", "Python-ML", "EmailJs", "API", "Postman", "Tailwind", "Bootstrap"].map(skill => (
+                <div key={skill} className="text-custom1 bg-custom3 dark:bg-custom2 p-2 md:m-2 rounded-lg shadow-md text-center transform transition-transform hover:scale-105">
                   {skill}
                 </div>
               ))}
@@ -92,9 +88,17 @@ export default function About() {
           <div>
             <h2 className="text-3xl font-bold mb-6">Courses & Certifications</h2>
             <div className="max-h-60 overflow-y-auto space-y-4 border-l-2 border-custom3 dark:border-custom2 pl-4">
-              {["Introduction to Programming through C++ (NPTEL)", "Developing AI Applications with Python and Flask", "Introduction to Web Development with HTML, CSS, JavaScript", "Build Dynamic User Interfaces (UI) for Websites", "Introduction to Computer Vision and Image Processing", "Introduction to Cybersecurity Tools & Cyberattacks"].map(course => (
-                <div key={course} className="text-lg">
-                  {course}
+              {[
+                "Introduction to Programming through C++ (NPTEL)",
+                "Developing AI Applications with Python and Flask",
+                "Introduction to Web Development with HTML, CSS, JavaScript",
+                "Build Dynamic User Interfaces (UI) for Websites",
+                "Introduction to Computer Vision and Image Processing",
+                "Introduction to Cybersecurity Tools & Cyberattacks"
+              ].map((course, index) => (
+                <div key={index} className="flex items-center space-x-3">
+                  <input type="radio" name="courses" className="form-radio text-custom3 dark:text-custom2" />
+                  <span className="text-lg">{course}</span>
                 </div>
               ))}
             </div>
