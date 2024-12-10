@@ -67,7 +67,7 @@ export default function Home() {
           </div>
           {isHovered && (
             <a
-              href="/docs/resume.pdf" // Link to the resume PDF
+              href="/docs/Resume.pdf" // Link to the resume PDF
               target="_blank"
               rel="noopener noreferrer"
               className="absolute inset-0 flex items-center justify-center bg-gray-900 bg-opacity-75 text-white text-lg font-semibold transition-opacity duration-300"
