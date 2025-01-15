@@ -76,7 +76,7 @@ export default function About() {
           <div>
             <h2 className="text-3xl font-bold mb-6">Skills</h2>
             <div className="max-h-60 overflow-y-auto grid grid-cols-3 gap-3">
-              {["C++", "JavaScript", "React", "Next.js", "Node.js", "Python-ML", "EmailJs", "API", "Postman", "Tailwind", "Bootstrap"].map(skill => (
+              {["C++", "JavaScript", "React", "Next.js", "Node.js", "Python-ML", "EmailJs", "API", "Postman", "Tailwind", "MUI", "Bootstrap"].map(skill => (
                 <div key={skill} className="text-custom1 bg-custom3 dark:bg-custom2 p-2 md:m-2 rounded-lg shadow-md text-center transform transition-transform hover:scale-105">
                   {skill}
                 </div>
