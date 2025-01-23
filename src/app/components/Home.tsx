@@ -21,10 +21,10 @@ export default function Home() {
       {/* Left side: Social Icons + Text Section */}
       <div className="md:col-span-5 flex flex-col justify-center items-start space-y-8 m-5 md:ml-10">
         {/* Typewriter Section */}
-        <h1 className="text-3xl md:text-5xl font-bold text-left fade-in mt-10">
+        <h1 className="text-3xl md:text-5xl font-bold text-left mt-10">
           Hey there!, This is Anish Sharma.
         </h1>
-        <div className="text-xl md:text-2xl font-medium mt-4 text-left fade-in">
+        <div className="text-xl md:text-2xl font-medium mt-4 text-left">
           <span>I am a Software Developer with expertise in </span>
           <div className="ml-2 inline-block text-custom3 dark:text-custom2">
             <Typewriter

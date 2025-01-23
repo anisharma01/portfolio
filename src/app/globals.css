@@ -94,24 +94,7 @@ body {
   transition: color 0.3s;
 }
 
-/* Global CSS for bounce animation */
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-30px);
-  }
-  60% {
-    transform: translateY(-15px);
-  }
-}
-
-.animate-bounce {
-  animation: bounce 1s infinite;
-}
-
-/* Navbar Slide In Animation */
+/* Navbar Shutter Slide Animation */
 @keyframes slideIn {
   from {
     transform: translateY(-100%);
@@ -120,7 +103,7 @@ body {
     transform: translateY(0);
   }
 }
-
+/* Using slideIn animation on the navbar */
 .navbar {
   animation: slideIn 0.5s ease-out;
 }
@@ -137,47 +120,9 @@ body {
   }
 }
 
-.fade-in {
-  animation: fadeIn 1s ease-out;
-}
-
-/* Bounce Button Animation */
-@keyframes smallBounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-10px);
-  }
-  60% {
-    transform: translateY(-5px);
-  }
-}
-
-.bounce-button {
-  animation: smallBounce 2s infinite;
-}
-
-/* Pulse Button Animation */
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-.pulse-button {
-  animation: pulse 1.5s infinite;
-}
-
 /* Add this in global.css or any custom CSS file */
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
