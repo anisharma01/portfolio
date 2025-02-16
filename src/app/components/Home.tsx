@@ -1,13 +1,15 @@
 "use client";
-
 import React, { useState } from "react";
-import Image from "next/image"; // Import Image from next/image
+import Image from "next/image";
 import Typewriter from "typewriter-effect";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub, faInstagram } from "@fortawesome/free-brands-svg-icons";
-import { faArrowDown, faComments } from "@fortawesome/free-solid-svg-icons"; // Import faComments from the solid icons
+import { faArrowDown, faComments } from "@fortawesome/free-solid-svg-icons";
+import { useTheme } from "../context/ThemeContext";
 
 export default function Home() {
+  const { theme } = useTheme();
+  const darkMode = theme === "dark";
   const [isHovered, setIsHovered] = useState(false);
 
   const handleHover = () => setIsHovered(true);
@@ -16,7 +18,7 @@ export default function Home() {
   return (
     <div
       id="home"
-      className="min-h-screen grid grid-cols-1 md:grid-cols-7 gap-8 items-center justify-center bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-100 p-4 md:p-8 transition-colors duration-500 ease-in-out"
+      className={`min-h-screen grid grid-cols-1 md:grid-cols-7 gap-8 items-center justify-center ${darkMode ? "bg-gray-800 text-gray-100" : "bg-gray-100 text-gray-800"} p-4 md:p-8 transition-colors duration-500 ease-in-out`}
     >
       {/* Left side: Social Icons + Text Section */}
       <div className="md:col-span-5 flex flex-col justify-center items-start space-y-8 m-5 md:ml-10">
@@ -26,7 +28,7 @@ export default function Home() {
         </h1>
         <div className="text-xl md:text-2xl font-medium mt-4 text-left">
           <span>I am a Software Developer with expertise in </span>
-          <div className="ml-2 inline-block text-custom3 dark:text-custom2">
+          <div className="ml-2 inline-block text-custom3">
             <Typewriter
               options={{
                 strings: ["MERN", "Next.js", "UI/UX Design"],
@@ -41,7 +43,7 @@ export default function Home() {
         {/* Get to Know Me Button */}
         <a
           href="#about"
-          className="text-xl px-4 py-2 bg-custom3 hover:bg-custom1 hover:text-custom3 dark:bg-custom2 text-black rounded-full dark:hover:bg-custom1 darkhover:text-custom2 hover:text-black transition-transform transform hover:scale-110 duration-300 flex items-center"
+          className="text-xl px-4 py-2 bg-custom3 hover:bg-custom1 hover:text-custom3 text-black rounded-full transition-transform transform hover:scale-110 duration-300 flex items-center"
         >
           Get to Know Me
           <FontAwesomeIcon icon={faArrowDown} className="ml-2" />
@@ -56,18 +58,18 @@ export default function Home() {
           onMouseLeave={handleLeave}
         >
           <Image
-            src="/images/resume_thumbnail.png" // Adjust the path if needed
+            src="/images/resume_thumbnail.png"
             alt="Resume Thumbnail"
-            width={192} // Specify the width for better optimization
-            height={192} // Specify the height for better optimization
-            className={`rounded-lg border-b-2 border-r-2 border-custom3 dark:border-custom2 shadow-lg transition-transform duration-300 ${isHovered ? 'filter blur-sm' : ''}`}
+            width={192}
+            height={192}
+            className={`rounded-lg border-b-2 border-r-2 border-custom3 shadow-lg transition-transform duration-300 ${isHovered ? 'filter blur-sm' : ''}`}
           />
           <div className={`absolute inset-0 flex items-center justify-center text-2xl font-bold ${isHovered ? 'hidden' : 'text-black shadow-lg'}`}>
             Resume
           </div>
           {isHovered && (
             <a
-              href="/docs/Resume.pdf" // Link to the resume PDF
+              href="https://drive.google.com/file/d/11VPnq8j4R0BjBZ7xAV_OH9-bjog5UaAf/view?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
               className="absolute inset-0 flex items-center justify-center bg-gray-900 bg-opacity-75 text-white text-lg font-semibold transition-opacity duration-300"
@@ -80,23 +82,20 @@ export default function Home() {
         {/* Simple Get in Touch Button */}
         <a
           href="#contact"
-          className="mt-6 text-xl flex items-center text-custom3 dark:text-custom2 transition-transform transform hover:scale-110 duration-300"
+          className="mt-6 text-xl flex items-center text-custom3 transition-transform transform hover:scale-110 duration-300"
         >
           Get in Touch
-          <FontAwesomeIcon icon={faComments} className="ml-2" /> {/* Chat icon */}
+          <FontAwesomeIcon icon={faComments} className="ml-2" />
         </a>
       </div>
 
       {/* Fixed Social Icons Section */}
-      <div className="fixed left-0 top-1/2 transform -translate-y-1/2 flex flex-col space-y-4 backdrop-blur-lg bg-white/30 dark:bg-gray-900/30 px-3 py-4 rounded-lg border-b-2 border-r-1 border-custom3 dark:border-custom2 shadow-lg hidden md:flex">
+      <div className="fixed left-0 top-1/2 transform -translate-y-1/2 flex flex-col space-y-4 backdrop-blur-lg bg-white/30 px-3 py-4 rounded-lg border-b-2 border-r-1 border-custom3 shadow-lg hidden md:flex">
         <a href="https://www.linkedin.com/in/anish-sharma-863048231/" target="_blank" rel="noopener noreferrer">
-          <FontAwesomeIcon icon={faLinkedin} size="2x" className="text-blue-700 dark:text-blue-400 hover:text-blue-500 dark:hover:text-blue-300 transition-transform transform hover:scale-110" />
+          <FontAwesomeIcon icon={faLinkedin} size="2x" className="text-blue-700 hover:text-blue-500 transition-transform transform hover:scale-110" />
         </a>
         <a href="https://github.com/anisharma01" target="_blank" rel="noopener noreferrer">
-          <FontAwesomeIcon icon={faGithub} size="2x" className="text-black dark:text-gray-300 hover:text-gray-700 dark:hover:text-gray-400 transition-transform transform hover:scale-110" />
-        </a>
-        <a href="https://www.instagram.com/anisharma.xe" target="_blank" rel="noopener noreferrer">
-          <FontAwesomeIcon icon={faInstagram} size="2x" className="text-pink-500 dark:text-pink-300 hover:text-pink-300 dark:hover:text-pink-200 transition-transform transform hover:scale-110" />
+          <FontAwesomeIcon icon={faGithub} size="2x" className="text-black hover:text-gray-700 transition-transform transform hover:scale-110" />
         </a>
       </div>
     </div>

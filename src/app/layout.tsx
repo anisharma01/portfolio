@@ -1,5 +1,6 @@
 import './globals.css';
 import { ReactNode } from 'react';
+import { ThemeProvider } from './context/ThemeContext';
 
 export const metadata = {
   title: "Anish' Portfolio",
@@ -13,7 +14,11 @@ type RootLayoutProps = {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <ThemeProvider>
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }

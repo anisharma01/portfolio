@@ -1,20 +1,23 @@
 "use client";
-
 import React, { useRef, useState } from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import emailjs from '@emailjs/browser';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useTheme } from "../context/ThemeContext";
 
 export default function Contact() {
+  const { theme } = useTheme();
+  const darkMode = theme === "dark";
+
   const form = useRef<HTMLFormElement>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
   const sendEmail = async (e: React.FormEvent) => {
     e.preventDefault();
-    setLoading(true); // Start loading
+    setLoading(true);
 
     if (form.current) {
       try {
@@ -28,71 +31,72 @@ export default function Contact() {
           draggable: true,
           progress: undefined,
         });
-        form.current.reset(); // Reset form after successful submission
+        form.current.reset();
       } catch (error) {
         setError("There was an issue sending your message. Please try again.");
       } finally {
-        setLoading(false); // Stop loading
+        setLoading(false);
       }
     } else {
-      setLoading(false); // Stop loading if form.current is null
+      setLoading(false);
     }
   };
 
   return (
-    <div id="contact" className="min-h-screen bg-gray-400 dark:bg-gray-600 flex flex-col items-center p-4 pt-20">
+    <div id="contact" className={`min-h-screen ${darkMode ? "bg-gray-600" : "bg-gray-400"} flex flex-col items-center p-4 pt-20`}>
       <ToastContainer />
       <div className="text-center mb-12 w-full max-w-4xl">
-        <h2 className="text-2xl md:text-3xl font-bold mb-4 text-gray-800 dark:text-gray-100">Contact Me</h2>
-        <p className="mt-4 text-gray-700 dark:text-gray-200">Feel free to get in touch with me using the form below or via the contact details provided.</p>
+        <h2 className="text-2xl md:text-3xl font-bold mb-4" style={{ color: darkMode ? "#e2e8f0" : "#1a202c" }}>Contact Me</h2>
+        <p className={darkMode ? "text-gray-200" : "text-gray-700"}>
+          Feel free to get in touch with me using the form below or via the contact details provided.
+        </p>
       </div>
 
-      {/* Contact Form */}
       <div className="w-full max-w-4xl">
-        <form ref={form} onSubmit={sendEmail} className="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md space-y-4">
+        <form ref={form} onSubmit={sendEmail} className={`p-6 rounded-lg shadow-md ${darkMode ? "bg-gray-700" : "bg-white"} space-y-4 text-black`}>
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
             <div>
-              <label htmlFor="name" className="block text-gray-700 dark:text-gray-300">Name</label>
+              <label htmlFor="name" className={darkMode ? "text-gray-300" : "text-gray-700"}>Name</label>
               <input
                 id="name"
-                name="from_name"  // This should match the name in your EmailJS template
+                name="from_name"
                 type="text"
-                className="text-custom1 mt-1 block w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                className="mt-1 block w-full px-4 py-2 border rounded-md shadow-sm focus:outline-none"
                 placeholder="Your Name"
                 required
               />
             </div>
             <div>
-              <label htmlFor="email" className="block text-gray-700 dark:text-gray-300">Email</label>
+              <label htmlFor="email" className={darkMode ? "text-gray-300" : "text-gray-700"}>Email</label>
               <input
                 id="email"
-                name="email_id"  // This should match the name in your EmailJS template
+                name="email_id"
                 type="email"
-                className="text-custom1 mt-1 block w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                className="mt-1 block w-full px-4 py-2 border rounded-md shadow-sm focus:outline-none"
                 placeholder="Your Email"
                 required
               />
             </div>
           </div>
           <div>
-            <label htmlFor="message" className="block text-gray-700 dark:text-gray-300">Message</label>
+            <label htmlFor="message" className={darkMode ? "text-gray-300" : "text-gray-700"}>Message</label>
             <textarea
               id="message"
-              name="message"  // This should match the name in your EmailJS template
+              name="message"
               rows={4}
-              className="text-custom1 mt-1 block w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+              className="mt-1 block w-full px-4 py-2 border rounded-md shadow-sm focus:outline-none"
               placeholder="Your Message"
               required
             ></textarea>
           </div>
           <button
             type="submit"
-            className={`w-full bg-custom1 dark:bg-custom1 text-white px-4 py-2 rounded-md shadow-md hover:bg-custom3 dark:hover:bg-custom2 transition-colors duration-300 ${loading ? 'opacity-50 cursor-not-allowed' : ''}`}
-            disabled={loading} // Disable button while loading
+            className={`w-full text-white px-4 py-2 rounded-md shadow-md transition-colors duration-300 ${darkMode ? "bg-custom1 hover:bg-custom3" : "bg-custom1 hover:bg-custom3"} ${loading ? 'opacity-50 cursor-not-allowed' : ''}`}
+            disabled={loading}
           >
             {loading ? "Sending..." : "Send Message"}
           </button>
-          {error && <p className="text-red-600 dark:text-red-400 mt-4">{error}</p>}
+          {error && <p className="mt-4 text-red-600">{error}</p>}
         </form>
         {loading && (
           <div className="flex justify-center mt-4">
@@ -101,7 +105,6 @@ export default function Contact() {
         )}
       </div>
 
-      {/* Loader Styling */}
       <style jsx>{`
         .loader {
           border: 4px solid rgba(255, 255, 255, 0.1);
@@ -111,25 +114,22 @@ export default function Contact() {
           height: 40px;
           animation: spin 1s linear infinite;
         }
-
         @keyframes spin {
           0% { transform: rotate(0deg); }
           100% { transform: rotate(360deg); }
         }
       `}</style>
 
-      {/* Contact Information */}
       <div className="mt-12 w-full max-w-4xl text-center">
         <p>Follow me on:</p>
-        {/* Social Media Handles */}
         <div className="mt-8 flex justify-center space-x-6">
-          <a href="https://www.linkedin.com/in/anish-sharma-863048231/" target="_blank" rel="noopener noreferrer" className="text-custom3 dark:text-custom2 hover:underline">
+          <a href="https://www.linkedin.com/in/anish-sharma-863048231/" target="_blank" rel="noopener noreferrer" className="hover:underline">
             <FontAwesomeIcon icon={faLinkedin} size="2x" />
           </a>
-          <a href="https://github.com/anisharma01" target="_blank" rel="noopener noreferrer" className="text-custom3 dark:text-custom2 hover:underline">
+          <a href="https://github.com/anisharma01" target="_blank" rel="noopener noreferrer" className="hover:underline">
             <FontAwesomeIcon icon={faGithub} size="2x" />
           </a>
-          <a href="https://x.com/Anish_Sharma__" target="_blank" rel="noopener noreferrer" className="text-custom3 dark:text-custom2 hover:underline">
+          <a href="https://x.com/Anish_Sharma__" target="_blank" rel="noopener noreferrer" className="hover:underline">
             <FontAwesomeIcon icon={faTwitter} size="2x" />
           </a>
         </div>
