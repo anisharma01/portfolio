@@ -4,7 +4,7 @@ import { ThemeProvider } from './context/ThemeContext';
 
 export const metadata = {
   title: "Anish' Portfolio",
-  description: "Anish Sharma's Portfolio",
+  description: "Anish Sharma's Portfolio Website",
 };
 
 type RootLayoutProps = {

@@ -43,7 +43,7 @@ export default function Contact() {
   };
 
   return (
-    <div id="contact" className={`min-h-screen ${darkMode ? "bg-gray-600" : "bg-gray-400"} flex flex-col items-center p-4 pt-20`}>
+    <div id="contact" className={`min-h-screen ${darkMode ? "bg-gray-600" : "bg-gray-300"} flex flex-col items-center p-4 pt-20`}>
       <ToastContainer />
       <div className="text-center mb-12 w-full max-w-4xl">
         <h2 className="text-2xl md:text-3xl font-bold mb-4" style={{ color: darkMode ? "#e2e8f0" : "#1a202c" }}>Contact Me</h2>

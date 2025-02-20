@@ -11,6 +11,8 @@ export default function Navbar() {
   const darkMode = theme === "dark";
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showScrollButton, setShowScrollButton] = useState(false);
+  
+  const toggleMenu = () => setIsMenuOpen((prev) => !prev);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,7 +22,6 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const toggleMenu = () => setIsMenuOpen((prev) => !prev);
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -48,11 +49,11 @@ export default function Navbar() {
         {/* Right: Dark Mode Toggle and Hamburger Menu */}
         <div className="flex items-center space-x-4">
           {/* Dark Mode Toggle */}
-          <label className="dark-mode-switch flex items-center">
+          <label className="dark-mode-switch flex items-center border-1 border-gray-400 rounded-full p-2 cursor-pointer">
             <FontAwesomeIcon
               icon={faSun}
               size="lg"
-              className={`icon ${darkMode ? 'text-gray-800' : 'text-gray-400'}`}
+              className={`icon text-gray-400`}
             />
             <input
               type="checkbox"
@@ -64,12 +65,12 @@ export default function Navbar() {
             <FontAwesomeIcon
               icon={faMoon}
               size="lg"
-              className={`icon ${darkMode ? 'text-gray-400' : 'text-gray-900'}`}
+              className={`icon text-black`}
             />
           </label>
 
           {/* Hamburger Menu Button */}
-          <button onClick={toggleMenu} className="text-gray-400 hover:text-white z-30">
+          <button onClick={toggleMenu} className="text-gray-400 hover:text-white z-30 border-1 border-gray-400 rounded-full p-2">
             <FontAwesomeIcon icon={isMenuOpen ? faTimes : faBars} size="lg" />
           </button>
         </div>

@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <div
       id="home"
-      className={`min-h-screen grid grid-cols-1 md:grid-cols-7 gap-8 items-center justify-center ${darkMode ? "bg-gray-800 text-gray-100" : "bg-gray-100 text-gray-800"} p-4 md:p-8 transition-colors duration-500 ease-in-out`}
+      className={`min-h-screen grid grid-cols-1 md:grid-cols-7 gap-8 items-center justify-center ${darkMode ? "bg-gray-800 text-gray-100" : "bg-gray-400 text-gray-800"} p-4 md:p-8 transition-colors duration-500 ease-in-out`}
     >
       {/* Left side: Social Icons + Text Section */}
       <div className="md:col-span-5 flex flex-col justify-center items-start space-y-8 m-5 md:ml-10">

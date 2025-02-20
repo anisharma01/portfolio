@@ -65,10 +65,11 @@ export default function Projects() {
   });
 
   return (
-    <div id="projects" className={`min-h-screen ${darkMode ? "bg-gray-800" : "bg-gray-300"} flex flex-col items-center p-5 pt-20`}>
+    <div id="projects" className={`min-h-screen ${darkMode ? "bg-gray-800" : "bg-gray-500"} flex flex-col items-center p-5 pt-20`}>
       <div className={`text-center mb-12 ${darkMode ? "text-custom5" : "text-custom1"}`}>
         <h2 className="text-3xl md:text-5xl font-bold mb-4">My Projects</h2>
         <p className="max-w-lg mx-auto">A showcase of my work in development...</p>
+        <p className="italic">*hover to know more*</p>
       </div>
 
       <div {...handlers} className="relative w-full md:w-4/5 lg:w-3/4 xl:w-2/3">

@@ -21,7 +21,7 @@ export default function About() {
   };
 
   return (
-    <div id="about" className={`py-20 min-h-screen ${darkMode ? "bg-gray-800 text-gray-100" : "bg-gray-200 text-gray-800"} flex flex-col items-center`}>
+    <div id="about" className={`py-20 min-h-screen ${darkMode ? "bg-gray-800 text-gray-100" : "bg-gray-300 text-gray-800"} flex flex-col items-center`}>
       <div className="max-w-6xl w-full space-y-12">
         {/* About Me Section */}
         <div className="flex flex-col md:flex-row gap-8">
@@ -43,7 +43,7 @@ export default function About() {
               </p>
               <p className="flex items-center">
                 <FontAwesomeIcon icon={faEnvelope} className="mr-3 text-custom3" />
-                Email: anishsharma1498@gmail.com
+                Email: anisharma1498@gmail.com
               </p>
               <p className="flex items-center">
                 <FontAwesomeIcon icon={faMapMarkerAlt} className="mr-3 text-custom3" />

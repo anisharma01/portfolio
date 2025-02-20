@@ -9,13 +9,13 @@ interface ThemeContextProps {
 }
 
 const ThemeContext = createContext<ThemeContextProps>({
-  theme: "light",
+  theme: "dark",
   toggleTheme: () => {},
 });
 
 export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   // Read stored theme from localStorage (if any)
-  const storedTheme = (typeof window !== "undefined" && localStorage.getItem("theme")) as Theme || "light";
+  const storedTheme = (typeof window !== "undefined" && localStorage.getItem("theme")) as Theme || "dark";
   const [theme, setTheme] = useState<Theme>(storedTheme);
 
   useEffect(() => {
