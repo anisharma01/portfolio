@@ -32,7 +32,7 @@ export default function Projects() {
       description: "An e-commerce website providing services to build various applications. Collaborated with the main developer team to optimize website performance.",
       technologies: ["Next.js", "TypeScript", "Node.js"],
       githubLink: "https://github.com/your-username/project3",
-      liveDemo: "https://www.eshopstride.com/",
+      liveDemo: "https://www.eshopstride.in/",
       image: "/images/project3.png",
     },
     {
@@ -40,7 +40,7 @@ export default function Projects() {
       description: "Developed a new dashboard system for Eshopstride, automating 90% of data management tasks and optimizing API response speed.",
       technologies: ["Next.js", "TypeScript", "API Integration"],
       githubLink: "https://github.com/your-username/project4",
-      liveDemo: "https://www.eshopstride.com/Dashboard_New",
+      liveDemo: "https://www.eshopstride.in/Dashboard_New",
       image: "/images/project4.png",
     },
   ];
