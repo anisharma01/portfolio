@@ -16,7 +16,7 @@ export default function Projects() {
       description: "An education platform providing various study materials for college students and assignments with solutions to help them.",
       technologies: ["React", "CSS", "Bootstrap"],
       githubLink: "https://github.com/anisharma01/Alasso",
-      liveDemo: "https://alasso.study/",
+      liveDemo: "https://alassotech.netlify.app/",
       image: "/images/project1.png",
     },
     {
