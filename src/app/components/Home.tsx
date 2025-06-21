@@ -69,7 +69,7 @@ export default function Home() {
           </div>
           {isHovered && (
             <a
-              href="https://drive.google.com/file/d/11VPnq8j4R0BjBZ7xAV_OH9-bjog5UaAf/view?usp=drive_link"
+              href="https://drive.google.com/file/d/1fOYBz0Cc5pN-wh2opF6B-Hm4lIjJY7ZD/view?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
               className="absolute inset-0 flex items-center justify-center bg-gray-900 bg-opacity-75 text-white text-lg font-semibold transition-opacity duration-300"
