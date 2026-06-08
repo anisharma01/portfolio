@@ -97,6 +97,9 @@ export default function Home() {
         <a href="https://github.com/anisharma01" target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon icon={faGithub} size="2x" className="text-black hover:text-gray-700 transition-transform transform hover:scale-110" />
         </a>
+        <a href="https://www.instagram.com/anisharma.xe/" target="_blank" rel="noopener noreferrer">
+          <FontAwesomeIcon icon={faInstagram} size="2x" className="text-pink-500 hover:text-pink-400 transition-transform transform hover:scale-110" />
+        </a>
       </div>
     </div>
   );

@@ -7,11 +7,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'custom1': '#1a202c',
+        'custom1': '#121825',
         'custom2': '#5FFBF1',
-        'custom3': '#abd688',
+        'custom3': '#89bd5e',
         'custom4': '#ffe26a',
-        'custom5': '#c7ddcc',
+        'custom5': '#b8ccff',
       },
       
       borderWidth: {

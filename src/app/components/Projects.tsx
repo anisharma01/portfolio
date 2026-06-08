@@ -12,6 +12,14 @@ export default function Projects() {
   const darkMode = theme === "dark";
   const projectData = [
     {
+      title: "ReScore-AI",
+      description: "An AI-powered platform for automated resume scoring and feedback.",
+      technologies: ["React", "Python", "Docker", "Supabase"],
+      githubLink: "https://github.com/anisharma01/AI_ResumeScreener",
+      liveDemo: "https://ai-resume-screener-talentlens.vercel.app/",
+      image: "/images/rescore-image.png",
+    },
+    {
       title: "Alasso",
       description: "An education platform providing various study materials for college students and assignments with solutions to help them.",
       technologies: ["React", "CSS", "Bootstrap"],
